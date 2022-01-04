@@ -23,7 +23,7 @@ namespace ChartApp
 
         private void Main_Load(object sender, EventArgs e)
         {
-            _chartActor = Program.ChartActors.ActorOf(Props.Create(() => new ChartingActor(sysChart)), "charting");
+            _chartActor = Program.ChartActors.ActorOf(Props.Create(() => new ChartingActor(sysChart)), "mycharting");
             var series = ChartDataHelper.RandomSeries("FakeSeries" + _seriesCounter.GetAndIncrement());
             _chartActor.Tell(new ChartingActor.InitializeChart(new Dictionary<string, Series>()
             {
@@ -41,5 +41,11 @@ namespace ChartApp
         }
 
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var series = ChartDataHelper.RandomSeries("FakeSeries" + _seriesCounter.GetAndIncrement());
+            _chartActor.Tell(new ChartingActor.AddSeries(series));
+        }
     }
 }
