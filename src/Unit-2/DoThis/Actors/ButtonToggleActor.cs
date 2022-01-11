@@ -68,9 +68,7 @@ namespace ChartApp.Actors
             _isToggledOn = !_isToggledOn;
 
             // change the text of the button
-            _myButton.Text = string.Format("{0} ({1})",
-                _myCounterType.ToString().ToUpperInvariant(),
-                _isToggledOn ? "ON" : "OFF");
+            _myButton.Text = string.Format("{0} ({1})", _myCounterType.ToString().ToUpperInvariant(), _isToggledOn ? "ON" : "OFF");
         }
     }
 }

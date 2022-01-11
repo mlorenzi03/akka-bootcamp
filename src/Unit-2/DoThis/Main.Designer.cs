@@ -35,6 +35,7 @@
             this.btnCpu = new System.Windows.Forms.Button();
             this.btnMemory = new System.Windows.Forms.Button();
             this.btnDisk = new System.Windows.Forms.Button();
+            this.btnPauseResume = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sysChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,11 +57,11 @@
             this.sysChart.Text = "sysChart";
 
             // 
-            // cpuButton
+            // btnDisk
             // 
             this.btnDisk.Location = new System.Drawing.Point(806, 232);
             this.btnDisk.Name = "btnDisk";
-            this.btnDisk.Size = new System.Drawing.Size(94, 29);
+            this.btnDisk.Size = new System.Drawing.Size(120, 29);
             this.btnDisk.TabIndex = 1;
             this.btnDisk.Text = "DISK (OFF)";
             this.btnDisk.UseVisualStyleBackColor = true;
@@ -69,9 +70,9 @@
             // 
             // cpuButton
             // 
-            this.btnMemory.Location = new System.Drawing.Point(806, 432);
+            this.btnMemory.Location = new System.Drawing.Point(806, 332);
             this.btnMemory.Name = "btnMemory";
-            this.btnMemory.Size = new System.Drawing.Size(94, 29);
+            this.btnMemory.Size = new System.Drawing.Size(120, 29);
             this.btnMemory.TabIndex = 1;
             this.btnMemory.Text = "MEMORY (OFF)";
             this.btnMemory.UseVisualStyleBackColor = true;
@@ -80,13 +81,24 @@
             // 
             // cpuButton
             // 
-            this.btnCpu.Location = new System.Drawing.Point(806, 632);
+            this.btnCpu.Location = new System.Drawing.Point(806, 432);
             this.btnCpu.Name = "btnCpu";
-            this.btnCpu.Size = new System.Drawing.Size(94, 29);
+            this.btnCpu.Size = new System.Drawing.Size(120, 29);
             this.btnCpu.TabIndex = 1;
             this.btnCpu.Text = "CPU (ON)";
             this.btnCpu.UseVisualStyleBackColor = true;
             this.btnCpu.Click += new System.EventHandler(this.btnCpu_Click);
+
+            // 
+            // btnPauseResume
+            // 
+            this.btnPauseResume.Location = new System.Drawing.Point(806, 532);
+            this.btnPauseResume.Name = "btnPauseResume";
+            this.btnPauseResume.Size = new System.Drawing.Size(120, 29);
+            this.btnPauseResume.TabIndex = 1;
+            this.btnPauseResume.Text = "PAUSE ||";
+            this.btnPauseResume.UseVisualStyleBackColor = true;
+            this.btnPauseResume.Click += new System.EventHandler(this.btnPauseResume_Click);
 
             // 
             // Main
@@ -97,6 +109,7 @@
             this.Controls.Add(this.btnCpu);
             this.Controls.Add(this.btnDisk);
             this.Controls.Add(this.btnMemory);
+            this.Controls.Add(this.btnPauseResume);
             this.Controls.Add(this.sysChart);
             this.Name = "Main";
             this.Text = "System Metrics";
@@ -112,6 +125,7 @@
         private System.Windows.Forms.Button btnCpu;
         private System.Windows.Forms.Button btnMemory;
         private System.Windows.Forms.Button btnDisk;
+        private System.Windows.Forms.Button btnPauseResume;
     }
 }
 
